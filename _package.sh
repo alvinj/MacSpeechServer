@@ -1,9 +1,18 @@
 #!/bin/sh
 
-# use sbt-assembly to create the Server jar file.
-# see the output for the location of the resulting jar file.
-# if this doesn't appear to run, run `sbt clean` first.
+OUTPUT_JAR=target/scala-2.10/MacSpeechServer-assembly-0.1.jar
+MAIN_CLASS=com.alvinalexander.macspeechserver.Server
 
-sbt assembly
+# ------------
+# SBT Assembly
+# ------------
+
+sbt "set offline := true" assembly
+
+if [ $? != 0 ]
+then
+  echo "Compile/assemble failed, exiting"
+  exit 1
+fi
 
 
