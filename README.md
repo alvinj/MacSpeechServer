@@ -13,7 +13,7 @@ This project started out as the server component of my Wikipedia "reader" applic
 Motivation
 ----------
 
-I had two main motivations for creating this project:
+I had the following motivations for creating this project:
 
 1. I use "speech to text" technology in several Scala/Java projects.
 1. Trying to get AppleScript to work with Java/Scala on Mac OS X can be a pain.
